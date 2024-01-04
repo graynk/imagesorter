@@ -2,7 +2,7 @@
 
 Yet another very specific tool that only I need. It requires a terminal that supports [terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/)
 
-![demo](./demo.mp4)
+https://github.com/graynk/imagesorter/assets/3626328/e0d80d12-c202-417a-a318-6f64fde4de6d
 
 You use it like this:
 ```bash

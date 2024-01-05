@@ -5,6 +5,11 @@ but you can fallback to Sixel by passing `--sixel` to the command.
 
 https://github.com/graynk/imagesorter/assets/3626328/0d978bd0-107d-41e6-aaac-ed923fc6ac0a
 
+You can install it by grabbing a binary from [releases](https://github.com/graynk/imagesorter/releases) page, or by running
+```bash
+go install github.com/graynk/imagesorter@latest
+```
+
 You use it like this:
 ```bash
 imagesorter [--sixel] /path/to/source cool_pictures not_so_cool_pictures can_be_deleted

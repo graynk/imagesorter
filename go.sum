@@ -2,6 +2,10 @@ github.com/dolmen-go/kittyimg v0.0.0-20220904140504-22f6493b700f h1:kei70IBuJLGr
 github.com/dolmen-go/kittyimg v0.0.0-20220904140504-22f6493b700f/go.mod h1:Bx/aNirksPWCgrgQ23kkHBXJLNIypTl9uLzmcKMrKnY=
 github.com/inancgumus/screen v0.0.0-20190314163918-06e984b86ed3 h1:fO9A67/izFYFYky7l1pDP5Dr0BTCRkaQJUG6Jm5ehsk=
 github.com/inancgumus/screen v0.0.0-20190314163918-06e984b86ed3/go.mod h1:Ey4uAp+LvIl+s5jRbOHLcZpUDnkjLBROl15fZLwPlTM=
+github.com/mattn/go-sixel v0.0.5 h1:55w2FR5ncuhKhXrM5ly1eiqMQfZsnAHIpYNGZX03Cv8=
+github.com/mattn/go-sixel v0.0.5/go.mod h1:h2Sss+DiUEHy0pUqcIB6PFXo5Cy8sTQEFr3a9/5ZLNw=
+github.com/soniakeys/quant v1.0.0 h1:N1um9ktjbkZVcywBVAAYpZYSHxEfJGzshHCxx/DaI0Y=
+github.com/soniakeys/quant v1.0.0/go.mod h1:HI1k023QuVbD4H8i9YdfZP2munIHU4QpjsImz6Y6zds=
 golang.org/x/crypto v0.17.0 h1:r8bRNjWL3GshPW3gkd+RpvzWrZAwPS49OmTGZ/uhM4k=
 golang.org/x/crypto v0.17.0/go.mod h1:gCAAfMLgwOJRpTjQ2zCCt2OcSfYMTeZVSRtQlPC7Nq4=
 golang.org/x/sys v0.0.0-20210615035016-665e8c7367d1/go.mod h1:oPkhp1MJrh7nUepCBck5+mAzfO9JrbApNNgaTdGDITg=

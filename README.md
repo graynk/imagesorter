@@ -1,12 +1,13 @@
 # imagesorter
 
-Yet another very specific tool that only I need. It requires a terminal that supports [terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/)
+Yet another very specific tool that only I need. By default it requires a terminal that supports [terminal graphics protocol](https://sw.kovidgoyal.net/kitty/graphics-protocol/),
+but you can fallback to Sixel by passing `--sixel` to the command.
 
-https://github.com/graynk/imagesorter/assets/3626328/e0d80d12-c202-417a-a318-6f64fde4de6d
+https://github.com/graynk/imagesorter/assets/3626328/0d978bd0-107d-41e6-aaac-ed923fc6ac0a
 
 You use it like this:
 ```bash
-imagesorter /path/to/source cool_pictures not_so_cool_pictures can_be_deleted
+imagesorter [--sixel] /path/to/source cool_pictures not_so_cool_pictures can_be_deleted
 ```
 
 Then it will read every PNG/JPG in source directory, display it in the terminal and ask you to which of the target directories it should be moved.

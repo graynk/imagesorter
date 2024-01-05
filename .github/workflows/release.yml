@@ -1,0 +1,30 @@
+on:
+  release:
+    types: [published]
+
+jobs:
+  releases-matrix:
+    name: Release Go Binary
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        # build and publish in parallel: linux/amd64, windows/amd64, darwin/arm64
+        goos: [ linux, windows, darwin ]
+        goarch: [ amd64, arm64 ]
+        exclude:
+          - goarch: amd64
+            goos: darwin
+          - goarch: arm64
+            goos: windows
+          - goarch: arm64
+            goos: linux
+    steps:
+      - uses: actions/checkout@v4
+      - uses: wangyoucao577/go-release-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          goos: ${{ matrix.goos }}
+          goarch: ${{ matrix.goarch }}
+          compress_assets: "OFF"
+          md5sum: false
+          binary_name: "imagesorter"

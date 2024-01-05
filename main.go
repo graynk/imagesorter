@@ -112,6 +112,10 @@ func loopOverFiles(source, question string, entries []os.DirEntry, sortingDirect
 		number := checkUserResponse(question, len(sortingDirectories), reader)
 		moveFileOrFail(source, sortingDirectories[number-1], pictureName)
 	}
+
+	screen.Clear()
+	screen.MoveTopLeft()
+	fmt.Println("all done")
 }
 
 func openImageOrFail(source, pictureName string) *os.File {
@@ -141,7 +145,7 @@ func checkUserResponse(question string, numberOfOptions int, reader *bufio.Reade
 			os.Exit(0)
 		}
 		number, err := strconv.Atoi(strings.TrimSpace(input))
-		if err != nil {
+		if err != nil || number <= 0 || number > numberOfOptions {
 			fmt.Printf("Please enter a number between 1 and %d\n", numberOfOptions)
 			continue
 		}

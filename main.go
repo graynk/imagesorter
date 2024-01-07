@@ -107,14 +107,21 @@ func loopOverFiles(source, question string, entries []os.DirEntry, sortingDirect
 	reader := bufio.NewReader(os.Stdin)
 	// can't really check, setting true by default
 	printer := ImagePrinter{isKittySupported: !isSixel}
+	allowedExtensions := []string{".png", "jpg", "jpeg"}
 	for _, picture := range entries {
 		if picture.IsDir() {
 			continue
 		}
 		pictureName := picture.Name()
-		if !strings.HasSuffix(pictureName, ".png") &&
-			!strings.HasSuffix(pictureName, ".jpeg") &&
-			!strings.HasSuffix(pictureName, ".jpg") {
+		allowed := false
+		for _, extension := range allowedExtensions {
+			lower := strings.ToLower(pictureName)
+			if strings.HasSuffix(lower, extension) {
+				allowed = true
+				break
+			}
+		}
+		if !allowed {
 			continue
 		}
 		screen.Clear()

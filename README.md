@@ -16,7 +16,7 @@ imagesorter [--sixel] /path/to/source cool_pictures not_so_cool_pictures can_be_
 ```
 or like this
 ```bash
-imagesorter [--sixel] [--scan] /path/to/source /path/to/target
+imagesorter [--sixel] --scan /path/to/source /path/to/target
 ```
 
 Then it will read every PNG/JPG in source directory, display it in the terminal and ask you to which of the target directories it should be moved.
